@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<EdgeServiceConfigDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Url>https://visitform.com/gx</Url>
+  <AccountName></AccountName>
+  <AccountPassword></AccountPassword>
+  <SiteId></SiteId>
+  <ScreenId></ScreenId>
+  <ConnectionString></ConnectionString>
+</EdgeServiceConfigDto>
