@@ -135,29 +135,3 @@ LangString DESC_SecService ${LANG_ENGLISH} "Install VisitForm Edge as a Windows 
 	!insertmacro MUI_DESCRIPTION_TEXT ${SecService} $(DESC_SecService)
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
-Var Dialog
-Var OSSLLink
-Var PTHLink
-
-Function DependencyPage
-	nsDialogs::Create 1018
-	Pop $Dialog
-
-	${If} $Dialog == error
-		Abort
-	${EndIf}
-
-	${NSD_CreateLabel} 0 0 100% 12u ".NET Framework 4.5"
-	${NSD_CreateLink} 13u 13u 100% 12u "https://www.microsoft.com/sv-se/download/details.aspx?id=30653"
-	Pop $OSSLLink
-	${NSD_OnClick} $OSSLLink OnClick_OSSL
-
-
-	!insertmacro MUI_HEADER_TEXT_PAGE "Dependencies" "This page lists packages that must be installed if not already present"
-	nsDialogs::Show
-FunctionEnd
-
-Function OnClick_OSSL
-	Pop $0
-	ExecShell "open" "https://www.microsoft.com/sv-se/download/details.aspx?id=30653"
-FunctionEnd
